@@ -46,12 +46,15 @@ class myComponent extends HTMLElement {
                 font-family: Georgia, serif;
             }
             label { 
-              font-family:serif;
+              font-family: Georgia, serif;
+              font-size: 17px;
             }
             #myCanvas {
-              border:1px solid;
+              border:2px solid;
+              border-radius: 20px;
             }
             .card-body {
+              border:3px solid;
               text-align:center;  /*1*/
             padding: 15px 20px; /*2*/
             box-sizing: border-box; /*3*/
@@ -105,18 +108,13 @@ class myComponent extends HTMLElement {
             button:focus {
               outline: 1px transparent;
             }
-
             .button:before {
-              display: none;
-            }
-
-            button:-webkit-details-marker {
               display: none;
             }
         </style>
         <div class="card-body">
         <h1>Lecteur audio Wajdi Gaiech</h1>
-        <canvas id="myCanvas" width=500 height=130></canvas>
+        <canvas id="myCanvas" width=500 height=130 ></canvas>
         <br>
         <audio id="player" src="${this.currentSoundObject.url}" style="visibility: hidden;" controls ></audio>
         <br>
@@ -136,8 +134,8 @@ class myComponent extends HTMLElement {
         <br>
         <webaudio-knob 
         id="volumeKnob" 
-        src="./assets/knobs/vernier.png" 
-        value="1" max="1" step="0.1" diameter="128" sprites="50" 
+        src="./assets/knobs/volume.png" 
+        value="1" max="1" step="0.1" diameter="128" sprites="100" 
         valuetip="0" tooltip="Volume" style= "margin-right: 10%;margin-left: 15%;">
       </webaudio-knob>
       <my-equalizer id="equalizer"></my-equalizer>

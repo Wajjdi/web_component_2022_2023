@@ -22,7 +22,6 @@ class Equalizer extends HTMLElement {
         <style>
         webaudio-knob{
             margin-right:30px;} 
-            
         </style>
 
         <webaudio-knob 
